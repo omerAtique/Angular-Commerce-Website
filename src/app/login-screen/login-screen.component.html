@@ -1,0 +1,91 @@
+<div class="signup-container">
+    <div class="signup-header">
+        <img src="./assets/angular-logo-black-and-white-1.png" alt="Logo">
+    </div>
+    <form class="signup-form" (ngSubmit)="onSubmit()">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingCompanyName" placeholder="Company Name"
+                [(ngModel)]="user.companyName" required>
+            <label for="floatingCompanyName"> </label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com"
+                [(ngModel)]="user.email" required>
+            <label for="floatingEmail"></label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                [(ngModel)]="user.password" required>
+            <label for="floatingPassword"></label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="tel" class="form-control" id="floatingPhone" placeholder="Phone"
+                [(ngModel)]="user.phone" required>
+            <label for="floatingPhone"></label>
+        </div>
+
+        <fieldset>
+            <legend class="paras">Choose Account Type:</legend>
+            <div class="toggle">
+              <input type="radio" name="AT" value="weight" id="sizeWeight" checked="checked" />
+              <label class= "paras" for="sizeWeight">Free</label>
+              <input type="radio" name="AT" value="dimensions" id="sizeDimensions" />
+              <label class= "paras" for="sizeDimensions">Trial</label>
+            </div>
+          </fieldset>
+        <br>
+          <fieldset>
+            <legend class="paras">Choose Store:</legend>
+            <div class="toggle">
+              <input type="radio" name="store" value="weight" id="sizeWeight" checked="checked" />
+              <label class= "paras" for="sizeWeight">Multi-Store</label>
+              <input type="radio" name="store" value="dimensions" id="sizeDimensions" />
+              <label class= "paras" for="sizeDimensions">Single-Store</label>
+            </div>
+          </fieldset>
+
+        <div class="form-floating mb-3">
+            <p class = "paras">Choose Country</p>
+            <select class="form-control" id="floatingCountry" placeholder="Country" [(ngModel)]="user.country" required>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="india">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Germany">Germany</option>
+                <option value="Ireland">Ireland</option>
+            </select>
+            <label for="floatingCountry"></label>
+        </div>
+        
+        <div class="form-floating mb-3">
+            <p class = "paras">Choose Business Type:</p>
+            <select class="form-control" id="floatingBusiness" placeholder="Choose Business Type" [(ngModel)]="user.business" required>
+                <option value="Footwear">Footwear</option>
+                <option value="Garments">Garments</option>
+                <option value="Grocery/Others">Grocery/Others</option>
+                <option value="Auto Parts">Auto Parts</option>
+                <option value="Restarant">Restarant</option>
+            </select>
+            <label for="floatingBusiness"></label>
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="terms" name="terms" [(ngModel)]="user.terms"
+                required>
+            <label class="form-check-label" for="terms">I have read and agree to the:</label>
+            <a href="#"> Terms of use</a>
+            <a href="#"> - Privacy Policy</a>
+            <a href="#"> - Delivery & Refund Policy</a>
+        </div>
+       
+          
+      
+        <button class="button-28" role="button">Start using App</button>
+       
+        <div class="already-registered">
+            <p>Already have an account?</p>
+            <a href="#">Login</a>
+        </div>
+    </form>
+</div>
